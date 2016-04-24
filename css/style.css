@@ -1,0 +1,102 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.material-icons.logo-format {
+  display: inline;
+}
+
+/* Progress Bar */
+.progress {
+  background-color: #c8e6c9;
+}
+
+.progress .determinate {
+  background-color: #4caf50;
+}
+
+.progress .indeterminate {
+  background-color: #4caf50;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 999;
+}
+
+#download-form {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5;
+  transition: all 0.5s;
+}
+
+/* PreLoader */
+#preloader {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+}
+
+#status {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	position: absolute;
+	top: 50%;
+	width: 200px;
+}
+
+/* Tabs */
+.nav {
+  width: 100%;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+}
+
+.tabs {
+  height: 56px;
+  background-color: #607d8b;
+}
+
+.tabs .tab {
+  line-height: 56px;
+  height: 56px;
+}
+
+.tabs .tab a {
+  color: #eeeeee;
+}
+
+.tabs .tab a:hover {
+  color: #fff;
+}
+
+.tabs .tab.disabled a {
+  color: #b0bec5;
+}
+
+.tabs .indicator {
+  height: 3px;
+  background-color: #eeeeee;
+}
