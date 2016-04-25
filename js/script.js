@@ -21,9 +21,9 @@
     $(window).scroll(function() {
       var scrollTop = $(document).scrollTop();
       if(scrollTop > offSet && navBar == 'fix') {
-        $("#download-form").addClass('fixed');
+        $("#download-form").toggleClass('fixed', true);
       } else {
-        $("#download-form").removeClass('fixed');
+        $("#download-form").toggleClass('fixed', false);
       }
     });
 

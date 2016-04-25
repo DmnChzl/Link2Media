@@ -30,19 +30,23 @@
   background-color: #4caf50;
 }
 
-.fixed {
+/* Download Form */
+#download-form {
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 999;
+  left:15%;
+  right:15%;
+}
+
+#download-form.fixed {
   position:fixed;
   top:0;
   left:0;
   right:0;
-  z-index: 999;
-}
-
-#download-form {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5;
-  transition: all 0.5s;
 }
 
 /* PreLoader */
