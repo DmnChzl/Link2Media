@@ -15,7 +15,8 @@
     var navBar = 'fix';
     var offSet = $("#download-form").offset().top;
 
-     $(".main").hide(0).delay(300).fadeIn('slow');
+    $('.parallax').parallax();
+    $(".main").toggleClass('fadeInCenter', true);
 
     /* NavBar Behavior */
     $(window).scroll(function() {
@@ -52,10 +53,10 @@
     $('#search').keyup(function (event) {
       if (event.keyCode == 13) {
         if ($("input#search").val().length == 0) {
-          Materialize.toast('Veuillez renseigner ce champ.', 3000);
+          Materialize.toast('Please complete this field.', 3000);
         } else {
           navBar = 'wait';
-          $('#download-form').removeClass('fixed');
+          $("#download-form").toggleClass('fixed', false);
           var link = $("input#search").val();
           $('#download-form').html("<div class='progress'><div class='indeterminate'></div></div>", 1500);
           $.ajax({
@@ -69,11 +70,11 @@
               navBar = 'static';
               data = JSON.parse(data);
               if(data.success == 1) {
-                $('#download-form').html("<h2 class='header center orange-text'>Lien Corrompu</h2>", 1500);
+                $('#download-form').html("<h2 class='header center orange-text'>Corrupt Link</h2>", 1500);
               } else {
-                $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large green' type='submit' value='Télécharger'></form>");
+                $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large green' type='submit' value='Download'></form>");
                 $('#download-button').val(data.filename);
-                Materialize.toast('Prêt !', 3000);
+                Materialize.toast('Ready !', 3000);
               }
             },
             error: function() {

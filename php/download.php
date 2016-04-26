@@ -1,5 +1,6 @@
 <?php
   $filename= $_POST['filename'];
+  /* Change this line with your own path */
   $file = '/home/link2media/' .$filename;
 
   if (file_exists($file)) {
