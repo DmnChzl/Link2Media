@@ -1,3 +1,23 @@
+![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/images/link2media.png)
+
+This is an awesome tool to convert any link to an audio or video file
+
+This includes features like :
+- Convert a link into audio format file
+- Or convert a link into video format file
+- Beautiful Material Design interface
+- Optimised for Linux architecture
+
+#Setting
+
+To run the application at home, you must change the path to the registration folder in the following files :
+- php/download.php
+- php/script.js
+
+#Screenshot
+
+![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/screenshots/computer_small.png)
+
 #License
 
     Copyright (C) 2016 Mr Doomy
