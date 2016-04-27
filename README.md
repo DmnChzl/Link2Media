@@ -12,7 +12,7 @@ This includes features like :
 
 To run the application at home, you must change the path to the registration folder in the following files :
 - php/download.php
-- php/script.js
+- php/script.php
 
 #Screenshot
 
