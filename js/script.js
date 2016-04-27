@@ -32,7 +32,7 @@
     $("#audio").click(function() {
       media = 'audio';
       if(navBar == 'static') {
-        $('#download-form').html("<div id='download-form' class='row center'><nav><div class='nav-wrapper'><div class='input-field green'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
       }
     });
 
@@ -40,7 +40,7 @@
     $("#video").click(function() {
       media = 'video';
       if(navBar == 'static') {
-        $('#download-form').html("<div id='download-form' class='row center'><nav><div class='nav-wrapper'><div class='input-field green'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
       }
     });
 
@@ -72,7 +72,7 @@
               if(data.success == 1) {
                 $('#download-form').html("<h2 class='header center orange-text'>Corrupt Link</h2>", 1500);
               } else {
-                $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large green' type='submit' value='Download'></form>");
+                $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large teal' type='submit' value='Download'></form>");
                 $('#download-button').val(data.filename);
                 Materialize.toast('Ready !', 3000);
               }
