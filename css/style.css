@@ -6,45 +6,6 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
-
-p {
-  line-height: 2rem;
-}
-
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
 .icon-block {
   padding: 0 15px;
 }
@@ -54,6 +15,30 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+/* Parallax */
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax {
+  background-color: #009688;
+}
+
+@media only screen and (max-width : 600px) {
+  .parallax-container {
+    min-height: 220px;
+  }
+}
+
+.parallax img {
+  min-height: 0;
+  width:100%;
+  height:auto;
 }
 
 /* Card */
@@ -96,6 +81,13 @@ footer.page-footer {
   right:15%;
 }
 
+@media only screen and (max-width : 600px) {
+  #download-form {
+    left:10%;
+    right:10%;
+  }
+}
+
 #download-form.fixed {
   position:fixed;
   top:0;
@@ -109,6 +101,15 @@ footer.page-footer {
   right: 0;
 }
 
+.tabs {
+  height: 56px;
+}
+
+.tabs .tab {
+  line-height: 56px;
+  height: 56px;
+}
+
 .tabs .tab a {
   color: #009688;
 }
@@ -118,7 +119,7 @@ footer.page-footer {
 }
 
 .tabs .indicator {
-  height: 2px;
+  height: 3px;
   background-color: #009688;
 }
 
