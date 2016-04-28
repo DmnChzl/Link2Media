@@ -32,7 +32,7 @@
     $("#audio").click(function() {
       media = 'audio';
       if(navBar == 'static') {
-        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
       }
     });
 
@@ -40,7 +40,7 @@
     $("#video").click(function() {
       media = 'video';
       if(navBar == 'static') {
-        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
       }
     });
 
