@@ -8,6 +8,23 @@ This includes features like :
 - Beautiful Material Design interface
 - Optimised for Linux architecture
 
+#Prerequisites
+
+You need to install those two software on your Linux server
+
+1. `YouTube-DL`
+
+    sudo pip3 install -U youtube-dl
+
+2. `FFMpeg`
+
+    cd /usr/src
+    sudo git clone git://source.ffmpeg.org/ffmpeg.git
+    cd ffmpeg
+    sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-nonfree
+    make
+    sudo make install
+
 #Setting
 
 To run the application at home, you must change the path to the registration folder in the following files :

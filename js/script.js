@@ -14,6 +14,7 @@
     var media = 'audio';
     var navBar = 'fix';
     var offSet = $("#download-form").offset().top;
+    var element = "<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>"
 
     $('.parallax').parallax();
     $(".main").toggleClass('fadeInCenter', true);
@@ -32,7 +33,7 @@
     $("#audio").click(function() {
       media = 'audio';
       if(navBar == 'static') {
-        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html(element, 1500);
       }
     });
 
@@ -40,7 +41,7 @@
     $("#video").click(function() {
       media = 'video';
       if(navBar == 'static') {
-        $('#download-form').html("<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>", 1500);
+        $('#download-form').html(element, 1500);
       }
     });
 
@@ -70,7 +71,8 @@
               navBar = 'static';
               data = JSON.parse(data);
               if(data.success == 1) {
-                $('#download-form').html("<h2 class='header center orange-text'>Corrupt Link</h2>", 1500);
+                $('#download-form').html(element, 1500);
+                Materialize.toast('Corrupt link !', 3000);
               } else {
                 $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large teal' type='submit' value='Download'></form>");
                 $('#download-button').val(data.filename);
@@ -79,7 +81,7 @@
             },
             error: function() {
               navBar = 'error';
-              $('#download-form').html("<h2 class='header center red-text'>Fatal Error</h2>", 1500);
+              $('#download-form').html("<h3 class='header center red-text'>Fatal Error</h3>", 1500);
             }
           });
         }

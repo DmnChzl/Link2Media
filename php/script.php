@@ -10,7 +10,7 @@
     $command = 'youtube-dl -o "/home/link2media/Music.%(ext)s" -x --audio-format mp3 ' .escapeshellarg($link);
   } else {
     $log['filename'] = 'Video.mp4';
-	/* Change this line with your own path */
+    /* Change this line with your own path */
     $command = 'youtube-dl -o "/home/link2media/Video.%(ext)s" -f mp4 ' .escapeshellarg($link);
   }
 

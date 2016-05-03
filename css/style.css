@@ -1,7 +1,7 @@
 p {
   line-height: 2rem;
 }
- 
+
 .icon-block {
   padding: 0 15px;
 }
@@ -23,6 +23,10 @@ footer.page-footer {
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .parallax {
@@ -44,8 +48,19 @@ footer.page-footer {
 /* Card */
 .resize {
   margin-top: 16px;
-  margin-left: 32px;
-  margin-right: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width : 600px) {
+  .resize {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
 }
 
 /* PreLoader */
