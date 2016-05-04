@@ -12,13 +12,13 @@ This includes features like :
 
 You need to install those two software on your Linux server
 
-1. YouTube-DL
+- YouTube-DL
 
 ```shell
    sudo pip3 install -U youtube-dl
 ```
 
-2. FFMpeg
+- FFMpeg
 
 ```shell
    cd /usr/src
