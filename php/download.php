@@ -1,7 +1,8 @@
 <?php
+  include("config.php");
   $filename= $_POST['filename'];
   /* Change this line with your own path */
-  $file = '/home/link2media/' .$filename;
+  $file = $homefolder . $filename;
 
   if (file_exists($file)) {
     header('Content-Description: File Transfer');

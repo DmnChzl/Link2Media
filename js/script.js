@@ -56,6 +56,7 @@
         if ($("input#search").val().length == 0) {
           Materialize.toast('Please complete this field.', 3000);
         } else {
+	  console.log("Media :" + media);
           navBar = 'wait';
           $("#download-form").toggleClass('fixed', false);
           var link = $("input#search").val();
@@ -76,6 +77,7 @@
               } else {
                 $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large teal' type='submit' value='Download'></form>");
                 $('#download-button').val(data.filename);
+		console.log(data.filename);
                 Materialize.toast('Ready !', 3000);
               }
             },
