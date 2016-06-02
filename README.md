@@ -31,13 +31,8 @@ You need to install those two software on your Linux server
 
 #Setting
 
-To run the application at home, you must change the path to the registration folder in the following files :
-<<<<<<< HEAD
-- php/config.php
-=======
-- php/`download.php`
-- php/`script.php`
->>>>>>> origin/master
+To run the application at home, you must change the path to the registration folder in the following file :
+- php/`config.php`
 
 #Screenshot
 
