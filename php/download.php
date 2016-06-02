@@ -1,13 +1,14 @@
 <?php
-  $filename= $_POST['filename'];
-  /* Change this line with your own path */
-  $file = '/home/link2media/' .$filename;
+  include("config.php");
+  $filename = $_POST['filename'];
+  $file = $folder.$filename;
+  $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
   if (file_exists($file)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/stream-octet');
     header("Content-Transfer-Encoding: binary");
-    header('Content-Disposition: attachment; filename="'.basename($file).'"');
+    header('Content-Disposition: attachment; filename="Media.'.$ext.'"');
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');

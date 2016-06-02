@@ -1,17 +1,32 @@
 <?php
+  include("config.php");
   $link = $_POST['link'];
   $media = $_POST['media'];
 
   $log = array();
 
+  $filename = trim(shell_exec('youtube-dl --get-id ' .escapeshellarg($link)));
+
   if($media == 'audio') {
-    $log['filename'] = 'Music.mp3';
-    /* Change this line with your own path */
-    $command = 'youtube-dl -o "/home/link2media/Music.%(ext)s" -x --audio-format mp3 ' .escapeshellarg($link);
+    $log['filename'] = $filename.'.mp3';
+
+    if (file_exists($folder.$filename.'.mp3')) {
+      $log['success'] = 0;
+      echo json_encode($log);
+      exit;
+    } else {
+      $command = 'youtube-dl -o "'.$folder.'%(id)s.%(ext)s" -x --audio-format mp3 ' .escapeshellarg($link);
+    }
   } else {
-    $log['filename'] = 'Video.mp4';
-    /* Change this line with your own path */
-    $command = 'youtube-dl -o "/home/link2media/Video.%(ext)s" -f mp4 ' .escapeshellarg($link);
+    $log['filename'] = $filename.'.mp4';
+
+    if (file_exists($folder.$filename.'.mp4')) {
+      $log['success'] = 0;
+      echo json_encode($log);
+      exit;
+    } else {
+      $command = 'youtube-dl -o "'.$folder.'%(id)s.%(ext)s" -f mp4 ' .escapeshellarg($link);
+    }
   }
 
   if (exec($command, $output, $ret)) {

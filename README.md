@@ -28,8 +28,7 @@ You need to install those two software on your Linux server
 #Setting
 
 To run the application at home, you must change the path to the registration folder in the following files :
-- php/download.php
-- php/script.php
+- php/config.php
 
 #Screenshot
 
