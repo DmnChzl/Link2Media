@@ -1,6 +1,6 @@
 ![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/images/link2media.png)
 
-This is an awesome tool to convert any link to an audio or video file
+This is an awesome tool to convert any link to an audio or video file.
 
 This includes features like :
 - Convert a link into audio format file
@@ -12,23 +12,32 @@ This includes features like :
 
 You need to install those two software on your Linux server
 
-1. `YouTube-DL`
+- YouTube-DL
 
-    sudo pip3 install -U youtube-dl
+```shell
+   sudo pip3 install -U youtube-dl
+```
 
-2. `FFMpeg`
+- FFMpeg
 
-    cd /usr/src
-    sudo git clone git://source.ffmpeg.org/ffmpeg.git
-    cd ffmpeg
-    sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-nonfree
-    make
-    sudo make install
+```shell
+   cd /usr/src
+   sudo git clone git://source.ffmpeg.org/ffmpeg.git
+   cd ffmpeg
+   sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-nonfree
+   make
+   sudo make install
+```
 
 #Setting
 
 To run the application at home, you must change the path to the registration folder in the following files :
+<<<<<<< HEAD
 - php/config.php
+=======
+- php/`download.php`
+- php/`script.php`
+>>>>>>> origin/master
 
 #Screenshot
 
