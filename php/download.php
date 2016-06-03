@@ -14,7 +14,7 @@
     header('Pragma: public');
     header('Content-Length: ' .filesize($file));
     readfile($file);
-    unlink($file);
+    // unlink($file);
   } else {
     header("HTTP/1.0 404 Not Found");
   }
