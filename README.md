@@ -34,6 +34,14 @@ You need to install those two software on your Linux server
 To run the application at home, you must change the path to the registration folder in the following file :
 - php/`config.php`
 
+#Optional
+
+I created a simple script to keep the files downloaded for a week.
+
+So, commenting the line `unlink($file)` in `download.php` and configuring `crontab` for that the script works every day, files stay stored in your download folder.
+
+The script returns the current date  and the number of deleted files and saves them in a text file.
+
 #Screenshot
 
 ![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/screenshots/computer_small.png)
