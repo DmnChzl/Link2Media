@@ -2,13 +2,13 @@
   include("config.php");
   $filename = $_POST['filename'];
   $file = $folder.$filename;
-  $ext = pathinfo($filename, PATHINFO_EXTENSION);
+  // $ext = pathinfo($filename, PATHINFO_EXTENSION);
 
   if (file_exists($file)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/stream-octet');
     header("Content-Transfer-Encoding: binary");
-    header('Content-Disposition: attachment; filename="Media.'.$ext.'"');
+    header('Content-Disposition: attachment; filename="'.$filename.'"');
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
