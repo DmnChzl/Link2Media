@@ -2,11 +2,10 @@
   include("config.php");
   $link = $_POST['link'];
   $media = $_POST['media'];
-  $ext = '.txt';
 
   $log = array();
 
-  $filename = trim(shell_exec('youtube-dl --get-title ' .escapeshellarg($link)));
+  $filename = trim(shell_exec('youtube-dl -e --encoding UTF-8 ' .escapeshellarg($link)));
   $filename = format($filename);
 
   if($media == 'audio') {
