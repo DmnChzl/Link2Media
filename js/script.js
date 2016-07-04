@@ -14,8 +14,7 @@
     var media = 'audio';
     var navBar = 'fix';
     var offSet = $("#download-form").offset().top;
-    var element = "<div class='row center'><nav><div class='nav-wrapper'><div class='input-field teal lighten-1'><input id='search' type='search' placeholder='URL' required><label for='search'><i class='material-icons'>file_download</i></label><i id='erase' class='material-icons'>close</i></div></div></nav></div>"
-
+    
     $('.parallax').parallax();
     $(".main").toggleClass('fadeInCenter', true);
 
@@ -32,17 +31,11 @@
     /* Audio Selected */
     $("#audio").click(function() {
       media = 'audio';
-      if(navBar == 'static') {
-        $('#download-form').html(element, 1500);
-      }
     });
 
     /* Video Selected */
     $("#video").click(function() {
       media = 'video';
-      if(navBar == 'static') {
-        $('#download-form').html(element, 1500);
-      }
     });
 
     /* Input Empty */
@@ -59,33 +52,52 @@
           navBar = 'wait';
           $("#download-form").toggleClass('fixed', false);
           var link = $("input#search").val();
-          $('#download-form').html("<div class='progress'><div class='indeterminate'></div></div>", 1500);
-          $.ajax({
+          $("#download-form").addClass('inactive');
+		  $("#download-progress").removeClass('inactive');
+	      $("#download-progress").addClass('active');
+		  $.ajax({
             method: "POST",
             url: "php/script.php",
             data: {
               "link": link,
               "media": media
             },
+			dataType: "json",
             success: function(data) {
               navBar = 'static';
-              data = JSON.parse(data);
               if(data.success == 1) {
-                $('#download-form').html(element, 1500);
+				$("#download-progress").removeClass('active');
+				$("#download-progress").addClass('inactive');
+				$("#download-form").removeClass('inactive');
                 Materialize.toast('Corrupt link !', 3000);
               } else {
-                $('#download-form').html("<form method='post' action='php/download.php'><input id='download-button' type='hidden' name='filename'><input class='waves-effect waves-light btn-large teal' type='submit' value='Download'></form>");
-                $('#download-button').val(data.filename);
+				$("#download-progress").removeClass('active');
+				$("#download-progress").addClass('inactive');
+				$("#download-button").removeClass('inactive');
+    	        $("#download-button").addClass('active');
+				$('#download-button').val(data.filename);
                 Materialize.toast('Ready !', 3000);
               }
             },
             error: function() {
-              navBar = 'error';
+			  $("#download-progress").removeClass('active');
+	          $("#download-progress").addClass('inactive');
+	          $("#download-form").removeClass('inactive');
               $('#download-form').html("<h3 class='header center red-text'>Fatal Error</h3>", 1500);
             }
           });
         }
       }
+    });
+	
+	/* Download Button */
+    $("#download-submit").click(function() {
+      console.log(media);
+      $("input#search").val('');
+      $("#download-button").removeClass('active');
+      $("#download-button").addClass('inactive');
+      $("#download-form").removeClass('inactive');
+      Materialize.toast('Downloading...', 3000);
     });
   });
 })(jQuery);

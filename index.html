@@ -115,6 +115,19 @@
               </div>
             </nav>
           </div>
+		  
+		  <!-- Download Progress -->
+		  <div id="download-progress" class="progress inactive">
+			<div class="indeterminate"></div>
+		  </div>
+
+		  <!-- Download Button -->
+          <div id="download-button" class="row center inactive">
+            <form method="post" action="php/download.php">
+              <input id="download-filename" type="hidden" name="filename">
+              <input id="download-submit" class="waves-effect waves-light btn-large teal" type="submit" value="Download">
+            </form>
+          </div>
 
           <br><br>
           <br><br>

@@ -17,6 +17,16 @@ footer.page-footer {
 	height: auto;
 }
 
+/* Active */
+div.active {
+  display: block;
+}
+
+/* Inactive */
+div.inactive {
+  display: none;
+}
+
 /* Parallax */
 .parallax-container {
   min-height: 380px;
@@ -108,6 +118,16 @@ footer.page-footer {
   top:0;
   left:0;
   right:0;
+}
+
+/* Download Progress */
+#download-progress {
+  margin-bottom:-10px;
+}
+
+/* Download Button */
+#download-button {
+  margin-bottom:-54px;
 }
 
 /* Tabs */
