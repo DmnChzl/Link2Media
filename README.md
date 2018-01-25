@@ -8,7 +8,7 @@ This includes features like :
 - Beautiful Material Design interface
 - Optimised for Linux architecture
 
-#Prerequisites
+# Prerequisites
 
 You need to install those two software on your Linux server
 
@@ -29,12 +29,12 @@ You need to install those two software on your Linux server
    sudo make install
 ```
 
-#Setting
+# Setting
 
 To run the application at home, you must change the path to the registration folder in the following file :
 - php/`config.php`
 
-#Optional
+# Optional
 
 I created a simple script to keep the files downloaded for a week.
 
@@ -42,11 +42,11 @@ So, commenting the line `unlink($file)` in `download.php` and configuring `cront
 
 The script returns the current date  and the number of deleted files and saves them in a text file.
 
-#Screenshot
+# Screenshot
 
 ![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/screenshots/computer_small.png)
 
-#License
+# License
 
     Copyright (C) 2016 Mr Doomy
 
