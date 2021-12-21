@@ -1,4 +1,4 @@
-![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/images/link2media.png)
+![Image](https://raw.githubusercontent.com/DmnChzl/Link2Media/master/dev/images/link2media.png)
 
 This is an awesome tool to convert any link to an audio or video file.
 
@@ -44,7 +44,7 @@ The script returns the current date  and the number of deleted files and saves t
 
 # Screenshot
 
-![Image](https://raw.githubusercontent.com/MrDoomy/Link2Media/master/dev/screenshots/computer_small.png)
+![Image](https://raw.githubusercontent.com/DmnChzl/Link2Media/master/dev/screenshots/computer_small.png)
 
 # License
 
